@@ -19,23 +19,47 @@ This is a simple backend service for managing notes, designed with maintainabili
 
 ## Getting Started
 
-1. Start your MongoDB instance.
-2. Create a `.env` file in the project root:
+## Setup
 
-3. Install dependencies:
+1. Clone the repository
+
+```bash
+git clone https://github.com/Pranavi000/notes_python_service
+```
+
+2. Create a `.env` file (use the example)
+```bash
+cp .env.example .env
+```
+Update values in `.env` if needed.
+
+3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Run the application:
+4. Run MongoDB locally
+
+
+```
+mongodb://localhost:27017
+```
+
+5. Start the application
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-5. Open the API documentation at:
-   [http://localhost:8000/docs](http://localhost:8000/docs)
+6. Open API docs
+
+```
+http://localhost:8000/docs
+```
+
+---
+
 
 ## How the APIs Work
 
@@ -52,4 +76,3 @@ uvicorn app.main:app --reload
 * `GET /api/v2/notes/by-tag/{tag}` – Fetch notes with a specific tag
 
 v2 was introduced to show how API versioning can support new features without affecting existing clients.
-
